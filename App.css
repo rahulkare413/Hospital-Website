@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f9fc;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #083d77;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-banner {
+  background: linear-gradient(to right, #006d77, #83c5be);
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.hero-banner h1 {
+  font-size: 2.5rem;
+}
+
+.hero-banner button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: white;
+  color: #006d77;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header {
+  background-color: #edf6f9;
+  padding: 2rem;
+}
+
+.services,
+.testimonial,
+.contact {
+  padding: 2rem;
+}
+
+.services ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services li {
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.contact {
+  background-color: #edf6f9;
+  font-size: 0.9rem;
+  color: #555;
+}

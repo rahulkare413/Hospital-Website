@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonals - Gadade Hospital & Cancer Care Latur</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f9fc;
+      color: #333;
+    }
+
+    /* HEADER SECTION */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #f0f8ff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .top-bar {
+      background-color: #e0f2ff;
+      padding: 8px 18px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      flex-wrap: wrap;
+    }
+
+    .bottom-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+      height: 100px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .clinic-name {
+      font-size: 15px;
+      font-weight: bold;
+      color: #004080;
+    }
+
+    .nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      height: auto;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 80px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .testimonial-content {
+      margin-top: 130px; /* space for fixed header */
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* Cards Section */
+    .testimonial-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 23%; /* Adjusted to fit 4 cards in a row */
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonial-card h3 {
+      font-size: 1.25em;
+      color: #004080;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: #666;
+    }
+
+    /* Stars Section */
+    .stars {
+      margin: 10px 0;
+      font-size: 1.5em;
+      color: gold;
+    }
+
+    /* Patient Image */
+    .patient-img {
+      margin-top: 20px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #004080;
+    }
+
+    /* Popup Modal (Full-Screen Testimonial) */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .modal-content h3 {
+      font-size: 2em;
+      color: #004080;
+    }
+
+    .modal-content p {
+      font-size: 1.25em;
+      color: #555;
+    }
+
+    .modal-content .stars {
+      font-size: 2em;
+      color: gold;
+    }
+
+    .close {
+      font-size: 1.5em;
+      color: #333;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER START -->
+  <div class="header">
+    <div class="top-bar">
+        <span>📍 Rajiv Gandhi Chowk, Mantri Nagar, Latur, Maharashtra 413512</span>
+        <a href="tel:+919764706760" class="call-us-link">📞 Call Us: +91 97647 06760</a>
+    </div>
+    <div class="bottom-bar">
+      <div class="logo">
+        <div style="text-align: center;">
+          <img src="allPhotos\Logo.jpg" alt="Gadade Hospital Latur" style="width: 100px; height: auto;" />
+          <h2 style="margin-top: 09px; font-family: Arial, sans-serif;">Gadade Hospital & Cancer care</h2>
+        </div>
+                <span class="clinic-name"></span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- HEADER END -->
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonial-content">
+    <h2>What Our Patients Say</h2>
+
+    <div class="testimonial-cards">
+      <div class="testimonial-card" onclick="openModal('testimonial1')">
+        <h3>Sarah L.</h3>
+        <p>"CancerCare provided the support and treatment I needed during one of the toughest times of my life. Their doctors and nurses are the most caring and dedicated professionals I’ve ever met."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <img src="patient1.jpg" alt="Sarah L." class="patient-img"/>
+      </div>
+
+      <div class="testimonial-card" onclick="openModal('testimonial2')">
+        <h3>John D.</h3>
+        <p>"The staff was amazing! They made me feel like family and always ensured I had the best care possible."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <img src="patient2.jpg" alt="John D." class="patient-img"/>
+      </div>
+
+      <div class="testimonial-card" onclick="openModal('testimonial3')">
+        <h3>Amy W.</h3>
+        <p>"My experience at CancerCare was life-changing. I felt supported every step of the way, and the treatment worked wonders!"</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <img src="https://cdn.pixabay.com/photo/2017/01/29/21/16/nurse-2019420_1280.jpg" alt="Amy W." class="patient-img"/>
+      </div>
+
+      <div class="testimonial-card" onclick="openModal('testimonial4')">
+        <h3>Michael B.</h3>
+        <p>"From the moment I walked in, I knew I was in good hands. The professionalism and compassion were top-notch."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <img src="patient4.jpg" alt="Michael B." class="patient-img"/>
+      </div>
+      <div class="testimonial-card" onclick="openModal('testimonial4')">
+        <h3>Michael B.</h3>
+        <p>"From the moment I walked in, I knew I was in good hands. The professionalism and compassion were top-notch."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <img src="patient4.jpg" alt="Michael B." class="patient-img"/>
+        
+    </div>
+  </section>
+
+  <!-- Modal for Testimonial 1 -->
+  <div id="testimonial1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('testimonial1')">&times;</span>
+      <h3>Sarah L.</h3>
+      <p>"CancerCare provided the support and treatment I needed during one of the toughest times of my life. Their doctors and nurses are the most caring and dedicated professionals I’ve ever met."</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+  </div>
+
+  <!-- Modal for Testimonial 2 -->
+  <div id="testimonial2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('testimonial2')">&times;</span>
+      <h3>John D.</h3>
+      <p>"The staff was amazing! They made me feel like family and always ensured I had the best care possible."</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+  </div>
+
+  <!-- Modal for Testimonial 3 -->
+  <div id="testimonial3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('testimonial3')">&times;</span>
+      <h3>Amy W.</h3>
+      <p>"My experience at CancerCare was life-changing. I felt supported every step of the way, and the treatment worked wonders!"</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+  </div>
+
+  <!-- Modal for Testimonial 4 -->
+  <div id="testimonial4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('testimonial4')">&times;</span>
+      <h3>Michael B.</h3>
+      <p>"From the moment I walked in, I knew I was in good hands. The professionalism and compassion were top-notch."</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+  </div>
+  
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+
+ <!-- Footer Section -->
+<footer style="background-color: #f8f8f8; padding: 40px 20px 20px; font-family: Arial, sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; gap: 20px;">
+    <!-- Left -->
+    <div style="flex: 1; min-width: 280px;">
+      <h1 style="font-size: 28px; font-weight: bold; margin: 0;">Gadade Hospital & Cancer care</h1>
+      <h2 style="font-size: 20px; font-weight: normal; margin: 5px 0;">Cancer & Hematology Center</h2>
+      <p style="margin: 10px 0;">Oncologist | Hematologist</p>
+      <p style="color: gray;">https://yourhospitalwebsite.com</p>
+    </div>
+
+    <!-- Right -->
+    <div style="flex: 1; min-width: 280px;">
+      <h2 style="margin-bottom: 10px;">Gadade Hospital & Cancer care</h2>
+      <p style="margin: 0;">The Skill to Heal the Spirit To Care</p>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+          <h3>Office</h3>
+          <p><strong>Gadade Hospital & Cancer care</strong><br>
+          Rajiv Gandhi Chowk<br>
+          Ausa Road Latur<br>
+          Latur, Maharashtra, 413415</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><strong>Phone:</strong> +91 9764706770</p>
+          <p><strong>Email:</strong>gadadehospitallatur@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div style="text-align: center; margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px;">
+    <p>Copyright © 2025 All Rights Reserved Your Hospital Name.</p>
+    <p>
+      <a href="#" style="margin-right: 10px; color: #000;">
+        <i class="fas fa-file-contract"></i> Privacy Policy
+    </a> /
+    <a href="#" style="margin-left: 10px; color: #000;">
+        <i class="fas fa-sitemap"></i> Sitemap
+    </a>
+    </p>
+    <div style="margin-top: 10px;">
+      <!-- Font Awesome Social Media Icons -->
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-twitter"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-pinterest"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-youtube"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-instagram"></i></a>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

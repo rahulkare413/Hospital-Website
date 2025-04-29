@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> About-us Gadade Hospital & Cancer Care Latur</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .sub-info h4 {
+  font-size: 22px;
+  color: #004080;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase; /* Optional: Makes name all uppercase */
+  letter-spacing: 1px;
+}
+
+
+    /* HEADER */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #f0f8ff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .top-bar {
+      background-color: #e0f2ff;
+      padding: 8px 18px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      flex-wrap: wrap;
+    }
+
+    .bottom-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+      height: 100px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .clinic-name {
+      font-size: 15px;
+      font-weight: bold;
+      color: #004080;
+    }
+
+    .nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 80px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .container {
+      padding: 150px 20px 60px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #083d77;
+      font-size: 2em;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* POPUP */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+
+    .popup-content {
+      background: #fff;
+      max-width: 800px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 30px;
+      border-radius: 15px;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .sub-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .sub-card {
+      flex: 1 1 calc(33.33% - 10px);
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .sub-card:hover {
+      background: #e6f7ff;
+    }
+
+    .sub-info {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background: #fafafa;
+      border-radius: 10px;
+      text-align: center;
+  padding: 20px;
+    }
+
+    .doctor-img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer {
+      background-color: #f8f8f8;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      .sub-card {
+        flex: 1 1 100%;
+      }
+
+      .nav ul {
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .bottom-bar {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+      }
+    }
+    .doctor-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #004080; /* Optional styling */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional shadow */
+  margin-bottom: 15px; /* Adds space below the image */
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="top-bar">
+      📍 Rajiv Gandhi Chowk, Mantri Nagar, Latur | 📞 +91 97647 06760
+    </div>
+    <div class="bottom-bar">
+      <div class="logo">
+        <div style="text-align: center;">
+          <img src="allPhotos\Logo.jpg" alt="Gadade Hospital Latur" style="width: 100px; height: auto;" />
+          <h2 style="margin-top: 09px; font-family: Arial, sans-serif;">Gadade Hospital & Cancer care</h2>
+        </div>
+                <span class="clinic-name"></span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">About Us</h2>
+    <div class="cards-grid">
+      <div class="card" onclick="openPopup('hospital')">
+        <h3>🏥 Gadade Cancer Hospital</h3>
+        <p>Established in 2015 | Latur, Maharashtra</p>
+      </div>
+      <div class="card" onclick="openPopup('doctors')">
+        <h3>👨‍⚕️ Our Doctor</h3>
+        <p>Meet our experienced oncology team</p>
+      </div>
+      <div class="card" onclick="openPopup('staff')">
+        <h3>👩‍⚕️ Our Staff</h3>
+        <p>Support & Care Team</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP SECTION -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <div id="popup-inner"></div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+<footer style="background-color: #f8f8f8; padding: 40px 20px 20px; font-family: Arial, sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; gap: 20px;">
+    <!-- Left -->
+    <div style="flex: 1; min-width: 280px;">
+      <h1 style="font-size: 28px; font-weight: bold; margin: 0;">Gadade Hospital & Cancer care</h1>
+      <h2 style="font-size: 20px; font-weight: normal; margin: 5px 0;">Cancer & Hematology Center</h2>
+      <p style="margin: 10px 0;">Oncologist | Hematologist</p>
+      <p style="color: gray;">https://yourhospitalwebsite.com</p>
+    </div>
+
+    <!-- Right -->
+    <div style="flex: 1; min-width: 280px;">
+      <h2 style="margin-bottom: 10px;">Gadade Hospital & Cancer care</h2>
+      <p style="margin: 0;">The Skill to Heal the Spirit To Care</p>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+          <h3>Office</h3>
+          <p><strong>Gadade Hospital & Cancer care</strong><br>
+          Rajiv Gandhi Chowk<br>
+          Ausa Road Latur<br>
+          Latur, Maharashtra, 413415</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><strong>Phone:</strong> +91 9764706770</p>
+          <p><strong>Email:</strong>gadadehospitallatur@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div style="text-align: center; margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px;">
+    <p>Copyright © 2025 All Rights Reserved Your Hospital Name.</p>
+    <p>
+      <a href="#" style="margin-right: 10px; color: #000;">
+        <i class="fas fa-file-contract"></i> Privacy Policy
+    </a> /
+    <a href="#" style="margin-left: 10px; color: #000;">
+        <i class="fas fa-sitemap"></i> Sitemap
+    </a>
+    </p>
+    <div style="margin-top: 10px;">
+      <!-- Font Awesome Social Media Icons -->
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-twitter"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-pinterest"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-youtube"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-instagram"></i></a>
+    </div>
+    
+  </div>
+</footer>
+
+  <script>
+    const popup = document.getElementById('popup');
+    const popupInner = document.getElementById('popup-inner');
+
+    function openPopup(type) {
+      let content = '';
+      if (type === 'hospital') {
+        content = `
+          <p><strong>Gadade Hospital &amp; Cancer Care - Latur</strong> is a hospital located in Latur, Maharashtra, India, specializing in oncology and hematology.</p>
+<p><strong>Location:</strong> Rajiv Gandhi Chowk, Mantri Nagar, Latur, Maharashtra 413512, India. It is situated near the Life Style Building on Ausa Road.</p>
+<p><strong>Contact Numbers:</strong> You can reach them at +91 97647 06760 and +91 9764706770.</p>
+<p><strong>Specializations &amp; Services:</strong> The hospital focuses on the diagnosis and treatment of cancer (oncology) and blood disorders (hematology). They offer comprehensive cancer care with advanced treatments for various types of cancer, including leukemia, brain tumors, breast tumors, stomach cancer, oral cancer, prostate cancer (external beam radiation), hepato-biliary issues, and cervical cancer (screening and vaccination). Their treatment modalities include chemotherapy, surgery (specialized cancer surgeries and general surgeries), radiation therapy, and supportive care like psychological consultation, cancer pain management, and blood transfusion. They also provide advanced diagnostic services, including 2D Echocardiography and Colour Doppler, as well as palliative cancer care.</p>
+<p><strong>Facilities &amp; Amenities:</strong> The hospital is equipped with advanced diagnostic facilities and offers amenities such as a waiting area. AC lodging services might also be available.</p>
+<p><strong>Accessibility &amp; Appointments:</strong> Gadade Hospital &amp; Cancer Care is known for providing timely intensive care. You may be able to book appointments online or by phone. Contact their helpline for details on their booking policy.</p>
+<p><strong>Additional Information:</strong> The hospital has been serving patients for at least 4 years. Dr. H.S. Gadade, an experienced oncologist with over 25 years in the field, is associated with the hospital. Gadade Hospital &amp; Cancer Care participates in the Mahatma Jyotiba Phule Jan Arogya Yojana (MJPJAY).</p>
+<p>It appears that "Gadade Hospital &amp; Cancer Care" and "Gadade Cancer Hospital" likely refer to the same medical institution.</p>
+        `;
+      } else if (type === 'doctors') {
+        content = `
+          <h2>Our Doctors</h2>
+          <div class="sub-cards">
+            <div class="sub-card" onclick="showInfo('doc1-info')">Dr. H.S Gadade</div>
+          </div>
+          <div class="sub-info" id="doc1-info">
+            <img src="allPhotos/H.S Gadade.jpeg" alt="Dr. H.S Gadade" class="doctor-img">
+            <h4>Dr. H.S Gadade</h4>
+            <p><strong>Education:</strong> MBBS, MD (Radiation oncology)</p>
+            <p><strong>Experience:</strong> 25+ years</p>
+            <p><strong>Expertise:</strong> Solid Tumors, Chemotherapy</p>
+          </div>
+          
+        `;
+      } else if (type === 'staff') {
+        content = `
+          <h2>Our Staff</h2>
+          <div class="sub-cards">
+            <div class="sub-card" onclick="showInfo('staff1')">Reception & Admin</div>
+            <div class="sub-card" onclick="showInfo('staff2')">Nursing Staff</div>
+            <div class="sub-card" onclick="showInfo('staff3')">Technicians</div>
+          </div>
+          <div class="sub-info" id="staff1">
+            <h4>Reception & Admin</h4>
+            <p>Trained personnel ensuring appointments, communication and coordination of services.</p>
+          </div>
+          <div class="sub-info" id="staff2">
+            <h4>Nursing Staff</h4>
+            <p>Compassionate care providers, trained in chemotherapy handling, patient care and emergency response.</p>
+          </div>
+          <div class="sub-info" id="staff3">
+            <h4>Technicians</h4>
+            <p>Experts in imaging, radiotherapy setup, and equipment handling. Ensure accurate diagnostic and treatment support.</p>
+          </div>
+        `;
+      }
+      popupInner.innerHTML = content;
+      popup.style.display = 'flex';
+    }
+
+    function closePopup() {
+      popup.style.display = 'none';
+    }
+
+    function showInfo(id) {
+      document.querySelectorAll('.sub-info').forEach(el => el.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

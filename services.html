@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - Gadade Hospital & Cancer Care Latur</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f9ff, #e0f7fa);
+      color: #333;
+    }
+    /* HEADER SECTION */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #f0f8ff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .top-bar {
+      background-color: #e0f2ff;
+      padding: 8px 18px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      flex-wrap: wrap;
+    }
+
+    .bottom-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+      height: 100px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .clinic-name {
+      font-size: 15px;
+      font-weight: bold;
+      color: #004080;
+    }
+
+    .nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      height: auto;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 80px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #083d77;
+      color: white;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+    .navigation h1 {
+      margin: 0;
+    }
+    .navigation ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .services-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+    .card-content h3 {
+      margin: 0 0 0.5rem;
+      color: #083d77;
+    }
+    .card-content p {
+      margin: 0;
+      color: #555;
+    }
+    .card-details {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 1rem;
+      color: #444;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      transition: max-height 0.5s ease, padding 0.5s ease;
+    }
+    .card.active .card-details {
+      max-height: 500px;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER START -->
+  <div class="header">
+    <div class="top-bar">
+        <span>📍 Rajiv Gandhi Chowk, Mantri Nagar, Latur, Maharashtra 413512</span>
+        <a href="tel:+919764706760" class="call-us-link">📞 Call Us: +91 97647 06760</a>
+    </div>
+    <div class="bottom-bar">
+      <div class="logo">
+        <div style="text-align: center;">
+          <img src="allPhotos\Logo.jpg" alt="Gadade Hospital Latur" style="width: 100px; height: auto;" />
+          <h2 style="margin-top: 09px; font-family: Arial, sans-serif;">Gadade Hospital & Cancer care</h2>
+        </div>
+                <span class="clinic-name"></span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- HEADER END -->
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="services-header">
+      <h2>Our Services</h2>
+      <p>Explore the wide range of services we provide to ensure quality cancer care at every stage.</p>
+    </div>
+    <div class="cards">
+      <!-- Start of Service Cards -->
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://cdn.pixabay.com/photo/2021/01/11/01/59/blood-test-5906819_1280.jpg" alt="Genetic Testing">
+        <div class="card-content">
+          <h3>Genetic Testing</h3>
+          <p>Identify inherited cancer risks for proactive prevention and early detection.</p>
+        </div>
+        <div class="card-details">
+          Genetic testing helps identify individuals with inherited gene mutations that increase cancer risk. This allows for early surveillance and preventive care.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://cdn.pixabay.com/photo/2012/12/24/08/39/disabled-72211_1280.jpg" alt="Rehabilitation Therapy">
+        <div class="card-content">
+          <h3>Rehabilitation Therapy</h3>
+          <p>Recover strength and improve quality of life with personalized physical therapies.</p>
+        </div>
+        <div class="card-details">
+          Our rehab programs include physiotherapy and occupational therapy to restore mobility, reduce fatigue, and enhance independence.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://cdn.pixabay.com/photo/2014/12/10/21/01/doctor-563429_1280.jpg" alt="Clinical Trials">
+        <div class="card-content">
+          <h3>Clinical Trials</h3>
+          <p>Access to cutting-edge research treatments through safe clinical studies.</p>
+        </div>
+        <div class="card-details">
+          Be part of medical breakthroughs with our monitored clinical trial participation. It offers new treatment options before they are widely available.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://cdn.pixabay.com/photo/2018/04/20/20/51/medical-3337005_1280.jpg" alt="Pain Management">
+        <div class="card-content">
+          <h3>Pain Management</h3>
+          <p>Advanced pain relief techniques for enhanced patient comfort and dignity.</p>
+        </div>
+        <div class="card-details">
+          We provide tailored pain relief plans including medications, nerve blocks, and palliative interventions to ensure patient comfort.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://cdn.pixabay.com/photo/2023/04/25/05/51/therapy-7949513_1280.jpg" alt="Holistic Therapies">
+        <div class="card-content">
+          <h3>Holistic Therapies</h3>
+          <p>Complementary healing practices including yoga, acupuncture, and meditation.</p>
+        </div>
+        <div class="card-details">
+          We integrate mind-body approaches to support emotional wellness and reduce stress during cancer treatment and recovery.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://cdn.pixabay.com/photo/2013/01/20/09/21/organic-75585_1280.jpg" alt="Diagnosis & Screening">
+        <div class="card-content">
+          <h3>Diagnosis & Screening</h3>
+          <p>Early detection saves lives. Our advanced technology helps diagnose accurately.</p>
+        </div>
+        <div class="card-details">
+          We offer state-of-the-art imaging, pathology, and screening tests for timely and precise cancer detection.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://via.placeholder.com/400x200?text=Radiation+Therapy" alt="Radiation Therapy">
+        <div class="card-content">
+          <h3>Radiation Therapy</h3>
+          <p>Targeted treatments that destroy cancer cells while preserving healthy tissue.</p>
+        </div>
+        <div class="card-details">
+          Advanced machines like linear accelerators deliver focused radiation, reducing side effects and improving outcomes.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://via.placeholder.com/400x200?text=Chemotherapy" alt="Chemotherapy">
+        <div class="card-content">
+          <h3>Chemotherapy</h3>
+          <p>Effective medication to eliminate or control cancer spread.</p>
+        </div>
+        <div class="card-details">
+          Customized drug combinations are provided with close monitoring to treat cancer and reduce recurrence.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://via.placeholder.com/400x200?text=Post-Treatment+Care" alt="Post-Treatment Care">
+        <div class="card-content">
+          <h3>Post-Treatment Care</h3>
+          <p>Support, monitoring, and recovery care for long-term health and well-being.</p>
+        </div>
+        <div class="card-details">
+          We guide patients with follow-up schedules, recovery nutrition, lifestyle changes, and long-term health planning.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://via.placeholder.com/400x200?text=Palliative+Care" alt="Palliative Care">
+        <div class="card-content">
+          <h3>Palliative Care</h3>
+          <p>Compassionate care to improve the quality of life for patients with serious illnesses.</p>
+        </div>
+        <div class="card-details">
+          Our palliative team manages symptoms, provides emotional support, and assists with complex care decisions.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="data:image/jpeg;base64,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" alt="Immunotherapy">
+        <div class="card-content">
+          <h3>Immunotherapy</h3>
+          <p>Boosting the body's immune system to fight cancer naturally and effectively.</p>
+        </div>
+        <div class="card-details">
+          We offer cutting-edge immunotherapy drugs like checkpoint inhibitors and CAR-T cells based on tumor profiling.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://via.placeholder.com/400x200?text=Nutritional+Support" alt="Nutritional Support">
+        <div class="card-content">
+          <h3>Nutritional Support</h3>
+          <p>Customized nutrition plans to support strength, immunity, and healing.</p>
+        </div>
+        <div class="card-details">
+          Our dietitians provide meal planning and supplementation to maintain weight, energy, and overall immunity.
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <img src="https://via.placeholder.com/400x200?text=Counseling+%26+Mental+Support" alt="Counseling">
+        <div class="card-content">
+          <h3>Counseling & Mental Support</h3>
+          <p>Emotional care and mental health support for patients and their families.</p>
+        </div>
+        <div class="card-details">
+          Psychological therapy, support groups, and grief counseling are offered to help you and your family cope.
+        </div>
+      </div>
+      <!-- End of Service Cards -->
+    </div>
+  </div>
+ <!-- Footer Section -->
+<footer style="background-color: #f8f8f8; padding: 40px 20px 20px; font-family: Arial, sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; gap: 20px;">
+    <!-- Left -->
+    <div style="flex: 1; min-width: 280px;">
+      <h1 style="font-size: 28px; font-weight: bold; margin: 0;">Gadade Hospital & Cancer care</h1>
+      <h2 style="font-size: 20px; font-weight: normal; margin: 5px 0;">Cancer & Hematology Center</h2>
+      <p style="margin: 10px 0;">Oncologist | Hematologist</p>
+      <p style="color: gray;">https://yourhospitalwebsite.com</p>
+    </div>
+
+    <!-- Right -->
+    <div style="flex: 1; min-width: 280px;">
+      <h2 style="margin-bottom: 10px;">Gadade Hospital & Cancer care</h2>
+      <p style="margin: 0;">The Skill to Heal the Spirit To Care</p>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+          <h3>Office</h3>
+          <p><strong>Gadade Hospital & Cancer care</strong><br>
+          Rajiv Gandhi Chowk<br>
+          Ausa Road Latur<br>
+          Latur, Maharashtra, 413415</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><strong>Phone:</strong> +91 9764706770</p>
+          <p><strong>Email:</strong>gadadehospitallatur@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div style="text-align: center; margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px;">
+    <p>Copyright © 2025 All Rights Reserved Your Hospital Name.</p>
+    <p>
+      <a href="#" style="margin-right: 10px; color: #000;">
+        <i class="fas fa-file-contract"></i> Privacy Policy
+    </a> /
+    <a href="#" style="margin-left: 10px; color: #000;">
+        <i class="fas fa-sitemap"></i> Sitemap
+    </a>
+    </p>
+    <div style="margin-top: 10px;">
+      <!-- Font Awesome Social Media Icons -->
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-twitter"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-pinterest"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-youtube"></i></a>
+      <a href="#" style="margin: 0 8px; color: #000;"><i class="fab fa-instagram"></i></a>
+    </div>
+    
+  </div>
+</footer>
+  
+  <!-- JavaScript -->
+  <script>
+    function toggleCard(card) {
+      card.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
